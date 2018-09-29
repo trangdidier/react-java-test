@@ -1,0 +1,20 @@
+.update-modal {
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+}
+
+.update-modal-info {
+    display:flex;
+    flex-direction: row;
+}
+
+.update-modal-footer {
+    margin-top: 10px;
+    display:flex;
+    justify-content: flex-end;
+}
+.flex-1 {
+    flex: 1;
+}

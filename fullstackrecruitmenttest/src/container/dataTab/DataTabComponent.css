@@ -1,0 +1,16 @@
+.data-tab {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.data-tab-entry {
+    display: flex;
+    border-bottom: 1px solid grey;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.flex-1 {
+    flex: 1;
+}
