@@ -1,7 +1,7 @@
-package com.rakuten.fullstackrecruitmenttest.beans;
+package com.dt.java.react.beans;
 
 
-import com.rakuten.fullstackrecruitmenttest.utils.Designation;
+import com.dt.java.react.utils.Designation;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

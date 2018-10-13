@@ -1,0 +1,19 @@
+.error-panel {
+    padding: 30px;
+    margin: 30px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: #DB1E1E;
+}
+
+.pagination {
+    margin: 10px 5px;
+}
+
+.current-page {
+    color: darkcyan;
+}
+.pagination:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

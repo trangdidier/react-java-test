@@ -1,10 +1,11 @@
-package com.rakuten.fullstackrecruitmenttest.service;
+package com.dt.java.react.service;
 
 
-import com.rakuten.fullstackrecruitmenttest.dto.EmployeeDTO;
-import com.rakuten.fullstackrecruitmenttest.beans.Employee;
-import com.rakuten.fullstackrecruitmenttest.exception.EmployeeException;
-import com.rakuten.fullstackrecruitmenttest.utils.Designation;
+import com.dt.java.react.beans.Employee;
+import com.dt.java.react.dto.EmployeeDTO;
+import com.dt.java.react.exception.EmployeeException;
+import com.dt.java.react.utils.Designation;
+import com.dt.java.react.utils.Utils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +20,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.DATA_JSON_FILE_NAME;
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.DATE_FORMAT;
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.LOG_ERROR_FILE_NAME;
 import static org.junit.Assert.assertTrue;
 
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -35,7 +33,7 @@ public class EmployeeServiceTest {
     EmployeeDTO employeeDTO;
 
     @Test
-    public void should_not_throw_exception_when_data_is_correct() throws EmployeeException{
+    public void should_not_throw_exception_when_data_is_correct() throws EmployeeException {
         //given
         EmployeeDTO employeeDTO = new EmployeeDTO("1","John", "IT", "Developer", "1000", "2018-01-01");
 
@@ -103,7 +101,7 @@ public class EmployeeServiceTest {
 
         //then
         System.out.println(exceptionMessage);
-        File file = new File(LOG_ERROR_FILE_NAME);
+        File file = new File(Utils.LOG_ERROR_FILE_NAME);
         assertTrue(file.exists());
         assertTrue(!exceptionMessage.isEmpty());
         file.delete();
@@ -120,14 +118,14 @@ public class EmployeeServiceTest {
         List<EmployeeDTO> givenEmployeeDTO = employeeService.getEmployeeList();
         //then
         assertTrue(expectedEmployeeDTOs.containsAll(givenEmployeeDTO));
-        File file = new File(DATA_JSON_FILE_NAME);
+        File file = new File(Utils.DATA_JSON_FILE_NAME);
         file.delete();
     }
 
     @Test
     public void should_create_a_data_file() throws Exception{
         //given
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Utils.DATE_FORMAT);
         String date = "2018-01-01";
         Date joigningDate = Date.from(LocalDate.parse(date, formatter).atStartOfDay(ZoneId.systemDefault()).toInstant());
         List<Employee> expectedEmployeeList = new ArrayList<Employee>();
@@ -137,7 +135,7 @@ public class EmployeeServiceTest {
         List<Employee> givenEmployeeList = employeeService.getDataFromFile();
         //then
         assertTrue(expectedEmployeeList.containsAll(givenEmployeeList));
-        File file = new File(DATA_JSON_FILE_NAME);
+        File file = new File(Utils.DATA_JSON_FILE_NAME);
         file.delete();
     }
 

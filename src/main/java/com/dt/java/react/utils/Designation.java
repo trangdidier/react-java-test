@@ -1,4 +1,4 @@
-package com.rakuten.fullstackrecruitmenttest.utils;
+package com.dt.java.react.utils;
 
 
 import java.util.Arrays;

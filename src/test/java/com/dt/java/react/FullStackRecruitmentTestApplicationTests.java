@@ -1,4 +1,4 @@
-package com.rakuten.fullstackrecruitmenttest;
+package com.dt.java.react;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

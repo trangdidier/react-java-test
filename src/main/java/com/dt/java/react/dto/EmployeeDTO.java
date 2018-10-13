@@ -1,6 +1,5 @@
-package com.rakuten.fullstackrecruitmenttest.dto;
+package com.dt.java.react.dto;
 
-import com.rakuten.fullstackrecruitmenttest.beans.Employee;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

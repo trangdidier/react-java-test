@@ -1,9 +1,9 @@
-package com.rakuten.fullstackrecruitmenttest.dao;
+package com.dt.java.react.dao;
 
-import com.rakuten.fullstackrecruitmenttest.beans.Employee;
-import com.rakuten.fullstackrecruitmenttest.dto.EmployeeDTO;
-import com.rakuten.fullstackrecruitmenttest.utils.Designation;
-import com.rakuten.fullstackrecruitmenttest.utils.Utils;
+import com.dt.java.react.beans.Employee;
+import com.dt.java.react.dto.EmployeeDTO;
+import com.dt.java.react.utils.Designation;
+import com.dt.java.react.utils.Utils;
 import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
@@ -15,13 +15,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.*;
-
 @Service
 public class EmployeeDao {
 
     public Employee toEmployee(EmployeeDTO employeeDTO) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Utils.DATE_FORMAT);
         Employee employee = new Employee();
         employee.setId(Integer.valueOf(employeeDTO.getId()));
         employee.setName(employeeDTO.getName());
@@ -36,7 +34,7 @@ public class EmployeeDao {
     }
 
     public EmployeeDTO toEmployeeDTO(Employee employee) {
-        final DateFormat formatter = new SimpleDateFormat(DATE_FORMAT);
+        final DateFormat formatter = new SimpleDateFormat(Utils.DATE_FORMAT);
         EmployeeDTO employeeDTO = new EmployeeDTO();
         employeeDTO.setId(String.valueOf(employee.getId()));
         employeeDTO.setName(employee.getName());

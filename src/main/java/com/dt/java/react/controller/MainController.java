@@ -1,14 +1,13 @@
-package com.rakuten.fullstackrecruitmenttest.controller;
+package com.dt.java.react.controller;
 
-import com.rakuten.fullstackrecruitmenttest.dto.EmployeeDTO;
-import com.rakuten.fullstackrecruitmenttest.exception.EmployeeException;
-import com.rakuten.fullstackrecruitmenttest.service.EmployeeService;
+import com.dt.java.react.dto.EmployeeDTO;
+import com.dt.java.react.service.EmployeeService;
+import com.dt.java.react.exception.EmployeeException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,8 +15,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.LOG_ERROR_FILE_NAME;
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.UNKNOWN_FILE_EXCEPTION_MESSAGE;
+import static com.dt.java.react.utils.Utils.LOG_ERROR_FILE_NAME;
+import static com.dt.java.react.utils.Utils.UNKNOWN_FILE_EXCEPTION_MESSAGE;
 
 @RestController
 public class MainController {

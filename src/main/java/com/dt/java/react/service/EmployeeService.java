@@ -1,12 +1,12 @@
-package com.rakuten.fullstackrecruitmenttest.service;
+package com.dt.java.react.service;
 
+import com.dt.java.react.beans.Employee;
+import com.dt.java.react.utils.Designation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import com.rakuten.fullstackrecruitmenttest.dao.EmployeeDao;
-import com.rakuten.fullstackrecruitmenttest.dto.EmployeeDTO;
-import com.rakuten.fullstackrecruitmenttest.beans.Employee;
-import com.rakuten.fullstackrecruitmenttest.exception.EmployeeException;
-import com.rakuten.fullstackrecruitmenttest.utils.Designation;
+import com.dt.java.react.dao.EmployeeDao;
+import com.dt.java.react.dto.EmployeeDTO;
+import com.dt.java.react.exception.EmployeeException;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.rakuten.fullstackrecruitmenttest.utils.Utils.*;
+import static com.dt.java.react.utils.Utils.*;
 
 @Service
 public class EmployeeService {

@@ -1,4 +1,4 @@
-package com.rakuten.fullstackrecruitmenttest.exception;
+package com.dt.java.react.exception;
 
 
 public class EmployeeException extends Exception{
